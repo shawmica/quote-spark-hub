@@ -108,9 +108,21 @@ export default {
 					'0%': { opacity: '0', transform: 'translateY(20px)' },
 					'100%': { opacity: '1', transform: 'translateY(0)' }
 				},
-				pulse: {
+				'pulse': {
 					'0%, 100%': { opacity: '1' },
 					'50%': { opacity: '0.5' }
+				},
+				'spin-slow': {
+					'0%': { transform: 'rotate(0deg)' },
+					'100%': { transform: 'rotate(360deg)' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-5px)' }
+				},
+				'shimmer': {
+					'0%': { backgroundPosition: '-100% 0' },
+					'100%': { backgroundPosition: '100% 0' }
 				}
 			},
 			animation: {
@@ -119,10 +131,22 @@ export default {
 				'fade-in': 'fade-in 0.3s ease-out',
 				'fade-out': 'fade-out 0.3s ease-out',
 				'slide-up': 'slide-up 0.4s ease-out',
-				pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite'
+				'pulse': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+				'spin-slow': 'spin-slow 3s linear infinite',
+				'float': 'float 4s ease-in-out infinite',
+				'shimmer': 'shimmer 2s ease-in-out infinite'
 			},
 			fontFamily: {
 				sans: ['Inter', 'sans-serif']
+			},
+			boxShadow: {
+				glow: '0 0 15px 2px rgba(155, 135, 245, 0.3)',
+				'glow-strong': '0 0 25px 5px rgba(155, 135, 245, 0.4)'
+			},
+			backgroundImage: {
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+				'quote-card': 'linear-gradient(135deg, rgba(229, 222, 255, 0.9), rgba(211, 228, 253, 0.9))',
+				'quote-card-dark': 'linear-gradient(135deg, rgba(40, 35, 60, 0.8), rgba(30, 41, 59, 0.8))'
 			}
 		}
 	},
